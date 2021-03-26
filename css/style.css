@@ -72,11 +72,8 @@ a {
 }
 
 /* General CSS for Title & Text */
-
-
-  
 .page_title {
-    text-align: center;
+  text-align: center;
 	font: 50px Lato, Sans-Serif;
 	color: rgb(0, 45, 117); 
 	letter-spacing: -5px;
@@ -94,7 +91,8 @@ a {
     font-family: "Lato";
     font-size: 20px;
     text-align: center;
-    padding: 7vh;
+    padding: 2vh 7vh;
+
 }
 
 @media screen and (min-width: 1100px){
@@ -110,7 +108,7 @@ a {
     }
 }
 
-/* Gallery */
+/* Gallery CSS*/
 
 .row {
     display: flex;
@@ -119,7 +117,6 @@ a {
     justify-content: center;
   }
   
-  /* Create four equal columns that sits next to each other */
   .column {
     flex: 25%;
     max-width: 25%;
@@ -132,7 +129,6 @@ a {
     width: 100%;
   }
   
-  /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
       flex: 50%;
@@ -140,7 +136,6 @@ a {
     }
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column {
       flex: 100%;
@@ -149,7 +144,7 @@ a {
   }
 
 
-/*Card*/
+/*Card CSS*/
 
 .center
 {
@@ -161,9 +156,7 @@ a {
   align-items: center;  
 }
 
-/* End Non-Essential  */
-
-.property-card
+.property_card
 {
   height:18em;
   width:300px;
@@ -184,9 +177,7 @@ a {
   box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
 
-/* Top Half of card, image. */
-
-.property-image
+.property_image
 {
   height:6em;
   width:100%;
@@ -200,8 +191,6 @@ a {
   background-position:left;
   background-repeat:no-repeat;
 }
-
-/* Bottom Card Section */
 
 .card_h2
 {
@@ -217,7 +206,7 @@ a {
   font-size:18px;
 }
 
-.property-description
+.property_description
 {
   background-color: #FAFAFC;
   height:12em;
@@ -232,29 +221,80 @@ a {
   flex-wrap: wrap;
 }
 
-/* Property Cards Hover States */
-
-.property-card:hover .property-description
+.property_card:hover .property_description
 {
   height:0em;
   padding:0px 1em;
 }
-.property-card:hover .property-image
+.property_card:hover .property_image
 {
   height:18em;
 }
 
-.property-card:hover .property-social-icons
+.property_card:hover
 {
   background-color:white;
 }
 
-.property-card:hover .property-social-icons:hover
+.property_card:hover
 {
   background-color:blue;
   cursor:pointer;
 }
 
+/* Grid CSS */
+
+@media screen and (max-width: 800px){
+
+  .grid_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgba(168, 201, 254, 0.5);
+    margin-right: 2vh;
+    margin-left: 2vh;
+    margin-bottom: 2vh;
+
+  }
+
+}
+
+@media screen and (min-width: 1000px){
+
+  .grid_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgba(168, 201, 254, 0.5);
+    margin-right: 20vh;
+    margin-left: 20vh;
+    margin-bottom: 5vh;
+  
+  }
+  
+}
+
+.grid-item{
+  border: 2px solid rgb(0, 45, 117);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+.page_h3{
+  font-family: "Lato";
+  margin:20px;
+  font-size:1.4em;
+  font-weight:700;
+  text-align: center;
+}
+
+.grid_p {
+  font-family: "Lato";
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+/* Footer CSS */
 footer {
     background-color: black;
     color: white;
