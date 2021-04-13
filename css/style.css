@@ -478,7 +478,7 @@ a.skip:focus {
   box-shadow: 0 4px 8px 0 rgba(168, 201, 254, 0.5);
 }
 
-.flip_card:hover .flip_card_inner {
+.flip_card:hover .flip_card_inner, .flip_card_inner:focus {
   transform: rotateY(180deg);
 }
 
