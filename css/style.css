@@ -9,7 +9,7 @@ body {
 
 }
 
-/* Skip CSS */
+/* Skip to Content CSS */
 a.skip {
     background: white;
     left: 0;
@@ -39,14 +39,6 @@ a.skip:focus {
 	letter-spacing: -5px;
     
 }
-
-.picture {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
 .page_p {
     font-family: "Lato";
     font-size: 20px;
@@ -55,17 +47,245 @@ a.skip:focus {
 
 }
 
-@media screen and (min-width: 1100px){
+a {
+  text-decoration: none;
+  color: black;
+}
 
-    .page_p {
-        font-family: "Lato";
-        font-size: 20px;
-        margin-right: 350px;
-        margin-left: 350px;
-        padding: 50px;
-        padding-bottom: 60px;
-        text-align: center;
-    }
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+
+  border: 2px solid rgb(168, 201, 254);
+  background: rgba(168, 201, 254, 0.5);
+}  
+
+/* Responsive CSS */
+
+@media screen and (min-width: 600px) {
+
+  header {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+  }
+
+  #logo {
+    height: 150px;
+    width: auto;
+    padding: 10px;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav_item {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  /* Grid */
+
+  .grid_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgba(168, 201, 254, 0.5);
+    margin-right: 2vh;
+    margin-left: 2vh;
+    margin-bottom: 2vh;
+
+  }
+
+  /* Resume */
+
+  .resume_container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+  }
+
+  /* Picture */
+
+  .picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+  }
+
+  /* Work Pictures */
+  .work_pictures {
+    display:inline;
+    
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .gallery {
+    display: none;
+  }  
+}
+
+@media screen and (min-width: 1000px) {
+
+  header {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+
+  }
+
+  #logo {
+    height: 100px;
+    width: auto;
+    padding-left: 20px;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+
+  }
+
+  .nav_item {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  /* Resume */
+  .resume_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+
+  /* Grid */
+
+  .grid_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgba(168, 201, 254, 0.5);
+    margin-right: 10vh;
+    margin-left: 10vh;
+    margin-bottom: 5vh;
+  
+  }
+
+  /* Picture */
+  .picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:75%;
+  }
+
+  /* Work Pictures */
+  .work_pictures {
+    display:inline;
+    
+    flex: 50%;
+    max-width: 50%;
+  }
+  
+  .gallery {
+    display: none;
+  }
+
+  /* Text */
+  .page_p {
+    font-family: "Lato";
+    font-size: 20px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding: 50px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  /* Navigation */
+  header {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+  }
+
+  #logo {
+    height: 100px;
+    width: auto;
+    padding-left: 20px;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px;
+
+  }
+
+  .nav_item {
+    padding: 10px;
+  }
+
+  /* Grid */
+
+  .grid_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgba(168, 201, 254, 0.5);
+    margin-right: 30vh;
+    margin-left: 30vh;
+    margin-bottom: 10vh;
+  
+  }
+
+  /* Resume */
+  
+  .picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .work_pictures {
+    display: none;
+  }
+
+  .gallery {
+    display: inline;
+  }
+
+  /* Text*/
+  .page_p {
+    font-family: "Lato";
+    font-size: 20px;
+    margin-right: 350px;
+    margin-left: 350px;
+    padding: 50px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+  
 }
 
 /* Gallery CSS*/
@@ -88,30 +308,72 @@ a.skip:focus {
     vertical-align: middle;
     width: 100%;
   }
-  
-  @media screen and (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
+
+/* Desktop View Gallery */
+
+.row_gallery {
+  margin-left: 250px;
+  margin-right: 250px; 
+}
+
+.column_gallery {
+  float: left;
+  width: 33%;
+  padding: 10px;
+}
+
+.column_gallery img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column_gallery img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row_gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container_gallery {
+  position: relative;
+  display: none;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}
 
 
 /*Card CSS*/
-
 .center
 {
   padding-top: 50px;
   height:400px;
   width:100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;  
 }
@@ -202,167 +464,7 @@ a.skip:focus {
   cursor:pointer;
 }
 
-/* Responsive CSS */
-
-@media screen and (min-width: 600px) {
-
-  header {
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-
-  }
-
-  #logo {
-    height: 150px;
-    width: auto;
-    padding: 10px;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-
-  .nav_links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .nav_item {
-    padding: 10px;
-    font-size: 30px;
-  }
-
-  .active {
-    border: 2px solid rgb(168, 201, 254);
-    background: rgba(168, 201, 254, 0.5);
-  }
-
-  .grid_container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: rgba(168, 201, 254, 0.5);
-    margin-right: 2vh;
-    margin-left: 2vh;
-    margin-bottom: 2vh;
-
-  }
-
-}
-
-@media screen and (min-width: 1000px) {
-
-  /* Navigation */
-  header {
-    background: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-
-  }
-
-  #logo {
-    height: 100px;
-    width: auto;
-    padding-left: 20px;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-
-  .nav_links {
-    display: flex;
-    flex-direction: row;
-    padding-right: 20px;
-
-  }
-
-  .nav_item {
-    padding: 10px;
-    font-size: 20px;
-  }
-
-  .active {
-    border: 2px solid rgb(168, 201, 254);
-    background: rgba(168, 201, 254, 0.5);
-  }
-
-  .grid_container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: rgba(168, 201, 254, 0.5);
-    margin-right: 10vh;
-    margin-left: 10vh;
-    margin-bottom: 5vh;
-  
-  }
-  
-}
-
-@media screen and (min-width: 1200px) {
-
-  /* Navigation */
-  header {
-    background: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-
-  }
-
-  #logo {
-    height: 100px;
-    width: auto;
-    padding-left: 20px;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-
-  .nav_links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 20px;
-
-  }
-
-  .nav_item {
-    padding: 10px;
-  }
-
-  .active {
-    border: 2px solid rgb(168, 201, 254);
-    background: rgba(168, 201, 254, 0.5);
-  }
-
-  .grid_container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: rgba(168, 201, 254, 0.5);
-    margin-right: 30vh;
-    margin-left: 30vh;
-    margin-bottom: 10vh;
-  
-  }
-  
-}
+/* Grid Items */
 
 .grid-item{
   border: 2px solid rgb(0, 45, 117);
@@ -389,10 +491,7 @@ a.skip:focus {
 /* Parallax */
 
 .parallax {
-   /* Set a specific height */
   min-height: 500px; 
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -418,24 +517,6 @@ a.skip:focus {
 }
 
 /* Resume Card */
-
-@media screen and (min-width: 600px) {
-  .resume_container {
-    display: grid;
-    grid-template-columns: auto;
-    padding: 10px;
-  }
-  
-}
-
-@media screen and (min-width: 1000px) {
-  .resume_container {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 10px;
-  }
-  
-}
 
 .resume_item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -499,6 +580,127 @@ a.skip:focus {
   background-color: rgba(168, 201, 254, 0.5);
   color: black;
   transform: rotateY(180deg);
+}
+
+/* Contact Form */
+.form {
+  width: 340px;
+  height: 440px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(50vh - 220px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
+}
+
+input:focus {
+  border-bottom: 2px solid #78788c;
+}
+
+.form_title {
+  font-size: 32px;
+  font-family: Lato;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+}
+
+.form_p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+.form_button {
+  float: right;
+  padding: 8px 12px;
+  margin: 20px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form_button:hover {
+  background: #78788c;
+  color: #fff;
+}
+
+/* Reduced Motion Media Query */
+@media (prefers-reduced-motion) {
+  
+  .parallax {
+    min-height: 500px; 
+  
+    background-attachment:scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .flip_card:hover .flip_card_inner, .flip_card_inner:focus {
+    -webkit-transform: none;
+    transform: none;
+  }
+  
+  .flip_card_front{
+    transform: rotateY(180deg);
+  }
+
+  .flip_card_back {
+    transform: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .property_card:hover .property_description
+  {
+    background-color: #FAFAFC;
+    height:12em;
+    width:90%;
+    position:absolute;
+    bottom:0em;
+    padding: 0.5em 1em;
+    text-align:center;
+    flex-wrap: wrap;
+    transition: none;
+  }
+
+  .property_card:hover .property_image
+  {
+    transition: none;
+    height:6em;
+    width:100%;
+    padding:1em 2em;
+    position:Absolute;
+    top:0px;
+    background-position:left;
+    background-repeat:no-repeat;
+  }
+
 }
 
 /* Footer CSS */

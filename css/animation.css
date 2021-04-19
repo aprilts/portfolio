@@ -134,11 +134,32 @@
 }
 /* Turns off animations if requested */
 @media (prefers-reduced-motion) {
-  * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    -ms-transition: none !important;
-    transition: none !important;
-   }
+  .title_h1 {
+    animation-name: dissolve;
+
+    font-family: 'Lato';
+    color: #fff;
+    font-size: 40px;
+    opacity: 1;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
+
+  .title span {
+    animation-name: dissolve;
+  }
+
+  .title_p {
+    animation-name: dissolve;
+
+    font-weight: 400;
+    opacity: 1;
+
+    font-family: 'Lato';
+    color: #ffffff;
+    font-size: 13px;
+    padding-top: 30px;
+    
+  }
 }

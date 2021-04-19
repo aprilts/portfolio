@@ -101,25 +101,31 @@
                 </div>
               </div>
 
-              <form action="https://formspree.io/f/xnqlqeqr" method="POST">
+            <div class="container">
+              <form class = "form" action="https://formspree.io/f/xnqlqeqr" method="POST">
                 <fieldset>
-                  <legend>Sample Form</legend>
+                  <legend class="form_title">Contact Me</legend>
               
-                <div class="container">
 
-                  Your Name
-                  <input type="text" placeholder="Enter Your Name" name="name" id="name"><br>
-              
-                  Your Email
-                  <input type = "email" placeholder="Enter Your Email" name="email" id="email">
-              
-                  Leave A Message
-                  <textarea placeholder="Enter your message"></textarea><br>
-                        
-                  <input type="submit"></input>    
-                </div>
+                  <label>
+                    <p class="form_p">Your Name</p>
+                    <input type="text" placeholder="Enter Your Name" name="name" id="name"><br>
+                  </label>
+
+                  <label>
+                    <p class="form_p">Your Email</p>
+                    <input type = "email" placeholder="Enter Your Email" name="email" id="email">
+                  </label>
+
+                  <label>
+                    <p class="form_p">Leave A Message</p>
+                    <input type="text" placeholder="Enter your message" name="message" id="message"></textarea><br>
+                  </label>     
+
+                  <button class="form_button" type="submit">Submit Message</button>
               </fieldset>
               </form>
+            </div>
 
         </main>
 

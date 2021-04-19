@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset = "utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/html5reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
@@ -43,28 +44,89 @@
             <p class="page_p">This semester, I interned at a career coaching company called Helium Consulting Coaches.
             Featured below is some of the work I did as an intern.</p>
 
-            <div class="row">
-                <div class="column">
-                  <img src="images/cons.png" alt="cons of consulting">
-                  <img src="images/growth.png" alt="growth strategy project">
-                  <img src="images/heliumlogo.png" alt="helium logo">
-                  <img src="images/inspirational.png" alt="inspirational message">
-                  <img src="images/intro.png" alt="introduction to helium">
-                </div>
-                <div class="column">
-                  <img src="images/pitch.png" alt="helium pitch deck">
-                  <img src="images/strategy.png" alt="strategy framework">
-                  <img src="images/testimonial.png" alt="testimonials">
-                  <img src="images/pros.png" alt="pros of consulting">
-                  <img src="images/services.png" alt="helium services">
-                </div>                
+            <div class="work_pictures">
+              <div class="row">
+                  <div class="column">
+                    <img src="images/cons.png" alt="cons of consulting">
+                    <img src="images/growth.png" alt="growth strategy project">
+                    <img src="images/heliumlogo.png" alt="helium logo">
+                    <img src="images/inspirational.png" alt="inspirational message">
+                    <img src="images/intro.png" alt="introduction to helium">
+                  </div>
+                  <div class="column">
+                    <img src="images/pitch.png" alt="helium pitch deck">
+                    <img src="images/strategy.png" alt="strategy framework">
+                    <img src="images/testimonial.png" alt="testimonials">
+                    <img src="images/pros.png" alt="pros of consulting">
+                    <img src="images/services.png" alt="helium services">
+                  </div>                
               </div>
+            </div>
+           
+          <div class="gallery">
+            <div style="text-align:center">
+              <p class="page_p" style="margin-top:-75px;">Click on the images below for a closer look!</p>
+            </div>
+            <!-- The four columns -->
+            <div class="row_gallery">
+              <div class="column_gallery">
+                <img src="../portfolio/images/intro.png" alt="introduction to helium" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column_gallery">
+                <img src="../portfolio/images/pros.png" alt="pros of consulting" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column_gallery">
+                <img src="../portfolio/images/cons.png" alt="cons of consulting" style="width:100%" onclick="myFunction(this);">
+              </div>
+              
+            </div>
+
+            <div class="row_gallery">
+              <div class="column_gallery">
+                <img src="../portfolio/images/heliumlogo.png" alt="helium logo" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column_gallery">
+                <img src="../portfolio/images/testimonial.png" alt="testimonials" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column_gallery">
+                <img src="../portfolio/images/inspirational.png" alt="inspirational messages" style="width:100%" onclick="myFunction(this);">
+              </div>
+            </div>
+
+            <div class="row_gallery" style="margin-bottom: 50px;">
+              <div class="column_gallery">
+                <img src="../portfolio/images/pitch.png" alt="helium pitch deck" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column_gallery">
+                <img src="../portfolio/images/growth.png" alt="growth strategy project" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column_gallery">
+                <img src="../portfolio/images/strategy.png" alt="strategy framework" style="width:100%" onclick="myFunction(this);">
+              </div>
+            </div>
+            
+            <div class="container_gallery">
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+              <img id="expandedImg" style="width:100%" alt="container image">
+              <div id="imgtext"></div>
+            </div>
+          </div>
 
         </main>
         
         <footer>
             <p>April Tsai - Portfolio 2021&copy; </p>
         </footer>
+
+        <script>
+          function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+          }
+        </script>
 
     </body>
 
